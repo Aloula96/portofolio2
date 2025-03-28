@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <title>John Doe Photography</title>
+    <meta name="description" content="Découvrez le portfolio de John Doe, photographe professionnel spécialisé en nature, événements et portraits. Des images uniques pour capturer vos plus beaux moments.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>John Doe - Portfolio</h1>
+    </header>
+
+    <main>
+        <nav class="bg-gray-800">
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+              <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                  <!-- Mobile menu button-->
+                  <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="absolute -inset-0.5"></span>
+                    <span class="sr-only">Open main menu</span>
+                    <!--
+                      Icon when menu is closed.
+          
+                      Menu open: "hidden", Menu closed: "block"
+                    -->
+                    <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    <!--
+                      Icon when menu is open.
+          
+                      Menu open: "block", Menu closed: "hidden"
+                    -->
+                    <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                  <div class="flex shrink-0 items-center">
+                    <img class="h-8 w-auto" src="https://imgs.search.brave.com/QvKV5wilLOmTJpo1_t1sMJM0qYuQUj42fmbhBmX4NWo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtcGxhdGZvcm0u/OTlzdGF0aWMuY29t/L0dGbkdid2pNUzFP/MVRQVlNkaGY4WlVv/MHBTST0vNTAweDUw/MC90b3Avc21hcnQv/OTlkZXNpZ25zLWNv/bnRlc3RzLWF0dGFj/aG1lbnRzLzU2LzU2/MDAyL2F0dGFjaG1l/bnRfNTYwMDIxNTM" alt="Your Company">
+                  </div>
+                  <div class="hidden sm:ml-6 sm:block">
+                    <div class="flex space-x-4">
+                      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                      <a href="#Àa propos" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">À propos</a>
+                      <a href="#service" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Services</a>
+                      <a href="#contact" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
+                        
+        <button id="theme-toggle" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Dark Mode</button>
+                    </div>
+                  </div>
+                </div>
+             
+                  </button>
+          
+                  
+         
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <div class="sm:hidden" id="mobile-menu">
+              <div class="space-y-1 px-2 pt-2 pb-3">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="#À propos"class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page"></a>
+                <a href="#service" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"></a>
+                <a href="#contact" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"></a>
+
+              </div>
+            </div>
+          </nav>
+
+
+          
+        
+        <div id="homepage-slider" class="slider">
+            <div class="st-slider">
+                <input type="radio" class="radio" name="slider" id="slide1" />
+                <input type="radio" class="radio" name="slider" id="slide2" />
+                <input type="radio" class="radio" name="slider" id="slide3" />
+                <input type="radio" class="radio" name="slider" id="slide4" />
+                <input type="radio" class="radio" name="slider" id="play1" checked="" />
+
+                <div class="images">
+                    <div class="images-inner">
+                        <div class="image-slide">
+                            <div class="image" style="background:url('./drapeau-coucher-soleil.jpg') center; background-size: cover;"></div>
+                        </div>
+                        <div class="image-slide">
+                            <div class="image" style="background:url('./palmiers.jpg') center; background-size: cover;"></div>
+                        </div>
+                        <div class="image-slide">
+                            <div class="image" style="background:url('./vue-aerienne-rivage.jpg') center; background-size: cover;"></div>
+                        </div>
+                        <div class="image-slide">
+                            <div class="image" style="background:url('./rocher-vagues.jpg') center; background-size: cover;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="À propos">
+            <h2 id="propos"class="About">À propos</h2>
+            <p>John Doe est un photographe passionné qui capture des images de la nature, des événements et des personnes.</p>
+        </section>
+
+        <section class="gallery">
+            <div class="gallery-item">
+                <img src="palmiers.jpg" alt="Palmiers au pied d’un immeuble">
+                <p>Des palmiers pour un voyage haut en couleurs.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="drapeau-coucher-soleil.jpg" alt="Drapeau en silhouette au coucher du soleil">
+                <p>Un coucher de soleil sur une nation flamboyante.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="rocher-vagues.jpg" alt="Roche noire frappée par les vagues">
+                <p>La mer comme seul horizon.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="vue-aerienne-rivage.jpg" alt="Vue aérienne d’un rivage rocheux">
+                <p>La mer comme grande source d'inspiration.</p>
+            </div>
+        </section>
+
+        <section id="service">
+ 
+            <button type="button" id="#liste">Mes services</button>
+            <p>John Doe propose une gamme de services :</p>
+            <ul>
+             
+            </ul>
+        </section>
+        <section>
+            <form class="max-w-sm mx-auto">
+                <div class="mb-5">
+                  <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Votre adresse email.</label>
+                  <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John@doe.com" required />
+                </div>
+                <div class="mb-5">
+                  <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mot de passe</label>
+                  <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                </div>
+                <div class="flex items-start mb-5">
+                  <div class="flex items-center h-5">
+                    <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
+                  </div>
+                  <label for="remember" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
+                </div>
+                <button id="button1" type="Submit" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Envoyé</button>
+              </form>
+        </section>
+        <button id="back-to-top" style="display: none; position: fixed; bottom: 20px; right: 20px;">Back to Top</button>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email : john@photography.com</p>
+            <p>Téléphone : 123-456-7890</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 John Doe Photography</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
