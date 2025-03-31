@@ -113,11 +113,19 @@ h1{
     display: flex;
     justify-content: center;
   }
-  p{font-family: "Playwrite AU SA", serif;
+  p {font-family: "Playwrite AU SA", serif;
     display: flex;
     justify-content: center;
   }
-
+  #service {
+    display: block;
+}
+ul#liste {
+  display: block;
+  padding: 10px;
+  background: #f4f4f4;
+  border: 1px solid #ccc;
+}
   
   
   

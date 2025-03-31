@@ -6,6 +6,8 @@
     <meta name="description" content="Découvrez le portfolio de John Doe, photographe professionnel spécialisé en nature, événements et portraits. Des images uniques pour capturer vos plus beaux moments.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -61,46 +63,67 @@
                   
          
             <!-- Mobile menu, show/hide based on menu state. -->
-            <div class="sm:hidden" id="mobile-menu">
+            <div class="sm:hidden" id="mobile-menu" style="z-index : 1">
               <div class="space-y-1 px-2 pt-2 pb-3">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a href="#À propos"class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page"></a>
-                <a href="#service" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"></a>
-                <a href="#contact" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"></a>
+                <a href="#Àa propos"class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">À propos</a>
+                <a href="#service" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Services</a>
+                <a href="#contact" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
 
               </div>
             </div>
           </nav>
 
 
-          
-        
-        <div id="homepage-slider" class="slider">
-            <div class="st-slider">
-                <input type="radio" class="radio" name="slider" id="slide1" />
-                <input type="radio" class="radio" name="slider" id="slide2" />
-                <input type="radio" class="radio" name="slider" id="slide3" />
-                <input type="radio" class="radio" name="slider" id="slide4" />
-                <input type="radio" class="radio" name="slider" id="play1" checked="" />
-
-                <div class="images">
-                    <div class="images-inner">
-                        <div class="image-slide">
-                            <div class="image" style="background:url('./drapeau-coucher-soleil.jpg') center; background-size: cover;"></div>
-                        </div>
-                        <div class="image-slide">
-                            <div class="image" style="background:url('./palmiers.jpg') center; background-size: cover;"></div>
-                        </div>
-                        <div class="image-slide">
-                            <div class="image" style="background:url('./vue-aerienne-rivage.jpg') center; background-size: cover;"></div>
-                        </div>
-                        <div class="image-slide">
-                            <div class="image" style="background:url('./rocher-vagues.jpg') center; background-size: cover;"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div id="default-carousel" class="relative w-full" data-carousel="slide" style="z-index : 0">
+  <div id="default-carousel" class="relative w-full" data-carousel="slide">
+    <!-- Carousel wrapper -->
+    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+        <!-- Item 1 (Visible par défaut) -->
+        <div class="block duration-700 ease-in-out" data-carousel-item>
+            <img src="./drapeau-coucher-soleil.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Drapeau au coucher du soleil">
         </div>
+        <!-- Item 2 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="./palmiers.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Palmiers">
+        </div>
+        <!-- Item 3 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="./vue-aerienne-rivage.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Vue aérienne du rivage">
+        </div>
+        <!-- Item 4 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="./rocher-vagues.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Rocher et vagues">
+        </div>
+    </div>
+
+    <!-- Slider indicators -->
+    <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+        <button type="button" class="w-3 h-3 rounded-full bg-white/50" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+        <button type="button" class="w-3 h-3 rounded-full bg-white/30" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+        <button type="button" class="w-3 h-3 rounded-full bg-white/30" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+        <button type="button" class="w-3 h-3 rounded-full bg-white/30" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+    </div>
+
+    <!-- Slider controls -->
+    <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+            </svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>
+    <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+
         <section id="À propos">
             <h2 id="propos"class="About">À propos</h2>
             <p>John Doe est un photographe passionné qui capture des images de la nature, des événements et des personnes.</p>
@@ -127,7 +150,7 @@
 
         <section id="service">
  
-            <button type="button" id="#liste">Mes services</button>
+            <button type="button" class="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800" id="#liste">Mes services</button>
             <p>John Doe propose une gamme de services :</p>
             <ul>
              
@@ -136,18 +159,18 @@
         <section>
             <form class="max-w-sm mx-auto">
                 <div class="mb-5">
-                  <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Votre adresse email.</label>
+                  <p>Votre adresse email.</p>
                   <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John@doe.com" required />
                 </div>
                 <div class="mb-5">
-                  <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mot de passe</label>
+                  <p>Mot de passe</p>
                   <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                 </div>
                 <div class="flex items-start mb-5">
                   <div class="flex items-center h-5">
                     <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
                   </div>
-                  <label for="remember" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
+                  <p>Remember me</p>
                 </div>
                 <button id="button1" type="Submit" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Envoyé</button>
               </form>
